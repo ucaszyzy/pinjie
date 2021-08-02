@@ -1,0 +1,14 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "D:/Xilinx/Vivado/2018.2/msys64/mingw64/bin/g++"
+   Compiling array_mul.cpp_pre.cpp.tb.cpp
+   Compiling array_div.cpp_pre.cpp.tb.cpp
+   Compiling cpu.cpp_pre.cpp.tb.cpp
+   Compiling array_abs.cpp_pre.cpp.tb.cpp
+   Compiling apatb_array_mul.cpp
+   Compiling cpu_test.cpp_pre.cpp.tb.cpp
+cosim.tv.mk:65: recipe for target 'obj/cpu_test.cpp_pre.cpp.tb.o' failed
+ERROR: [COSIM-317] C++ compile error.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-331] Aborting co-simulation: C simulation failed, compilation errors.

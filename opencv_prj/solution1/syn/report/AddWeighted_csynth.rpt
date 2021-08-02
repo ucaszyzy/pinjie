@@ -1,0 +1,183 @@
+
+
+================================================================
+== Vivado HLS Report for 'AddWeighted'
+================================================================
+* Date:           Thu Jul 29 09:33:26 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        opencv_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.232|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+---------+-----+---------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    | min |   max   | min |   max   |   Type  |
+    +-----+---------+-----+---------+---------+
+    |    1|  2088721|    1|  2088721|   none  |
+    +-----+---------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+-----+---------+----------+-----------+-----------+----------+----------+
+        |               |    Latency    | Iteration|  Initiation Interval  |   Trip   |          |
+        |   Loop Name   | min |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +---------------+-----+---------+----------+-----------+-----------+----------+----------+
+        |- loop_height  |    0|  2088720| 3 ~ 1934 |          -|          -| 0 ~ 1080 |    no    |
+        | + loop_width  |    0|     1931|        13|          1|          1| 0 ~ 1920 |    yes   |
+        +---------------+-----+---------+----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    124|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      6|     890|   2298|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     90|
+|Register         |        0|      -|     434|     32|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      6|    1324|   2544|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      2|       1|      4|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+-----+------+
+    |         Instance         |        Module        | BRAM_18K| DSP48E|  FF |  LUT |
+    +--------------------------+----------------------+---------+-------+-----+------+
+    |array_mul_dadd_64cud_U25  |array_mul_dadd_64cud  |        0|      3|  445|  1149|
+    |array_mul_dadd_64cud_U26  |array_mul_dadd_64cud  |        0|      3|  445|  1149|
+    +--------------------------+----------------------+---------+-------+-----+------+
+    |Total                     |                      |        0|      6|  890|  2298|
+    +--------------------------+----------------------+---------+-------+-----+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------+----------+-------+---+----+------------+------------+
+    |            Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------+----------+-------+---+----+------------+------------+
+    |i_V_fu_127_p2                       |     +    |      0|  0|  39|          32|           1|
+    |j_V_fu_138_p2                       |     +    |      0|  0|  39|          32|           1|
+    |ap_block_state15_pp0_stage0_iter12  |    and   |      0|  0|   2|           1|           1|
+    |exitcond2_i_fu_122_p2               |   icmp   |      0|  0|  18|          32|          32|
+    |exitcond_i_fu_133_p2                |   icmp   |      0|  0|  18|          32|          32|
+    |ap_block_pp0_stage0_01001           |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter1    |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                       |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1             |    xor   |      0|  0|   2|           2|           1|
+    +------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                               |          |      0|  0| 124|         134|          72|
+    +------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  27|          5|    1|          5|
+    |ap_enable_reg_pp0_iter1   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter12  |   9|          2|    1|          2|
+    |dst_data_stream_V_blk_n   |   9|          2|    1|          2|
+    |src1_data_stream_V_blk_n  |   9|          2|    1|          2|
+    |src2_data_stream_V_blk_n  |   9|          2|    1|          2|
+    |t_V_4_reg_102             |   9|          2|   32|         64|
+    |t_V_reg_91                |   9|          2|   32|         64|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     |  90|         19|   70|        143|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                 |   4|   0|    4|          0|
+    |ap_enable_reg_pp0_iter0   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9   |   1|   0|    1|          0|
+    |exitcond_i_reg_163        |   1|   0|    1|          0|
+    |i_V_reg_158               |  32|   0|   32|          0|
+    |sum_reg_187               |  64|   0|   64|          0|
+    |t_V_4_reg_102             |  32|   0|   32|          0|
+    |t_V_reg_91                |  32|   0|   32|          0|
+    |tmp_14_reg_172            |  64|   0|   64|          0|
+    |tmp_15_reg_177            |  64|   0|   64|          0|
+    |tmp_i_112_reg_182         |  64|   0|   64|          0|
+    |exitcond_i_reg_163        |  64|  32|    1|          0|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     | 434|  32|  371|          0|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+--------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++----------------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk                      |  in |    1| ap_ctrl_hs |     AddWeighted    | return value |
+|ap_rst                      |  in |    1| ap_ctrl_hs |     AddWeighted    | return value |
+|ap_start                    |  in |    1| ap_ctrl_hs |     AddWeighted    | return value |
+|ap_done                     | out |    1| ap_ctrl_hs |     AddWeighted    | return value |
+|ap_idle                     | out |    1| ap_ctrl_hs |     AddWeighted    | return value |
+|ap_ready                    | out |    1| ap_ctrl_hs |     AddWeighted    | return value |
+|src1_rows_V_read            |  in |   32|   ap_none  |  src1_rows_V_read  |    scalar    |
+|src1_cols_V_read            |  in |   32|   ap_none  |  src1_cols_V_read  |    scalar    |
+|src1_data_stream_V_dout     |  in |   64|   ap_fifo  | src1_data_stream_V |    pointer   |
+|src1_data_stream_V_empty_n  |  in |    1|   ap_fifo  | src1_data_stream_V |    pointer   |
+|src1_data_stream_V_read     | out |    1|   ap_fifo  | src1_data_stream_V |    pointer   |
+|src2_data_stream_V_dout     |  in |   64|   ap_fifo  | src2_data_stream_V |    pointer   |
+|src2_data_stream_V_empty_n  |  in |    1|   ap_fifo  | src2_data_stream_V |    pointer   |
+|src2_data_stream_V_read     | out |    1|   ap_fifo  | src2_data_stream_V |    pointer   |
+|dst_data_stream_V_din       | out |   64|   ap_fifo  |  dst_data_stream_V |    pointer   |
+|dst_data_stream_V_full_n    |  in |    1|   ap_fifo  |  dst_data_stream_V |    pointer   |
+|dst_data_stream_V_write     | out |    1|   ap_fifo  |  dst_data_stream_V |    pointer   |
++----------------------------+-----+-----+------------+--------------------+--------------+
+

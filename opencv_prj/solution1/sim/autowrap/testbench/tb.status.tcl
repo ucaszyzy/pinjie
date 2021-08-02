@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName array_mul.cpp_pre.cpp.tb.cpp

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"array_mul": {
+			"proto_instances": {
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+   Build using "D:/Xilinx/Vivado/2018.2/msys64/mingw64/bin/g++"
+   Compiling image_filter.cpp_pre.cpp.tb.cpp
+   Compiling test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_image_filter.cpp
+   Compiling opencv_top.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

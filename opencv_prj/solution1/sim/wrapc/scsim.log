@@ -1,0 +1,8 @@
+   Build using "D:/Xilinx/Vivado/2018.2/msys64/mingw64/bin/g++"
+   Compiling array_mul.cpp_pre.cpp.tb.cpp
+   Compiling array_div.cpp_pre.cpp.tb.cpp
+   Compiling cpu.cpp_pre.cpp.tb.cpp
+   Compiling array_abs.cpp_pre.cpp.tb.cpp
+   Compiling apatb_array_mul.cpp
+   Compiling cpu_test.cpp_pre.cpp.tb.cpp
+cosim.tv.mk:65: recipe for target 'obj/cpu_test.cpp_pre.cpp.tb.o' failed

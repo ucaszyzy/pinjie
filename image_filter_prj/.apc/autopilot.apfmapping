@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="image_filter.h" path="D:\hls_OpenCV\src\image_filter.h"/>
+    <originFiles name="image_filter.cpp" path="D:\hls_OpenCV\src\image_filter.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="D:\hls_OpenCV\src\test.cpp"/>
+    <originFiles name="opencv_top.cpp" path="D:\hls_OpenCV\src\opencv_top.cpp"/>
+    <originFiles name="opencv_top.h" path="D:\hls_OpenCV\src\opencv_top.h"/>
+    <originFiles name="test_1080p.bmp" path="D:\hls_OpenCV\src\test_1080p.bmp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

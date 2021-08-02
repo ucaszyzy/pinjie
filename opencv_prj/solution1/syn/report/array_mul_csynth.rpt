@@ -1,0 +1,342 @@
+
+
+================================================================
+== Vivado HLS Report for 'array_mul'
+================================================================
+* Date:           Thu Jul 29 09:33:26 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        opencv_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.232|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+----------+-----+----------+---------+
+    |     Latency    |    Interval    | Pipeline|
+    | min |    max   | min |    max   |   Type  |
+    +-----+----------+-----+----------+---------+
+    |   24|  16652544|   24|  16652544|   none  |
+    +-----+----------+-----+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+--------------+-----+---------+-----+---------+---------+
+        |                         |              |    Latency    |    Interval   | Pipeline|
+        |         Instance        |    Module    | min |   max   | min |   max   |   Type  |
+        +-------------------------+--------------+-----+---------+-----+---------+---------+
+        |grp_AddWeighted_fu_268   |AddWeighted   |    1|  2088721|    1|  2088721|   none  |
+        |grp_Mul_fu_277           |Mul           |    1|  2084401|    1|  2084401|   none  |
+        |grp_Mul_fu_286           |Mul           |    1|  2084401|    1|  2084401|   none  |
+        |grp_AXIvideo2Mat_fu_295  |AXIvideo2Mat  |    3|  2080083|    3|  2080083|   none  |
+        |grp_Mat2AXIvideo_fu_326  |Mat2AXIvideo  |    1|  2076841|    1|  2076841|   none  |
+        |grp_Split_fu_348         |Split         |    1|  2076841|    1|  2076841|   none  |
+        +-------------------------+--------------+-----+---------+-----+---------+---------+
+
+        * Loop: 
+        +---------------+-----+---------+----------+-----------+-----------+----------+----------+
+        |               |    Latency    | Iteration|  Initiation Interval  |   Trip   |          |
+        |   Loop Name   | min |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +---------------+-----+---------+----------+-----------+-----------+----------+----------+
+        |- loop_height  |    0|  2076840| 3 ~ 1923 |          -|          -| 0 ~ 1080 |    no    |
+        | + loop_width  |    0|     1920|         2|          1|          1| 0 ~ 1920 |    yes   |
+        +---------------+-----+---------+----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    128|
+|FIFO             |        0|      -|      80|   1216|
+|Instance         |        0|     28|    3816|   5181|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    868|
+|Register         |        -|      -|     121|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|     28|    4017|   7393|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|     12|       3|     13|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+--------------+---------+-------+------+------+
+    |         Instance        |    Module    | BRAM_18K| DSP48E|  FF  |  LUT |
+    +-------------------------+--------------+---------+-------+------+------+
+    |grp_AXIvideo2Mat_fu_295  |AXIvideo2Mat  |        0|      0|   885|   445|
+    |grp_AddWeighted_fu_268   |AddWeighted   |        0|      6|  1324|  2544|
+    |grp_Mat2AXIvideo_fu_326  |Mat2AXIvideo  |        0|      0|   138|   326|
+    |grp_Mul_fu_277           |Mul           |        0|     11|   683|   824|
+    |grp_Mul_fu_286           |Mul           |        0|     11|   683|   824|
+    |grp_Split_fu_348         |Split         |        0|      0|   103|   218|
+    +-------------------------+--------------+---------+-------+------+------+
+    |Total                    |              |        0|     28|  3816|  5181|
+    +-------------------------+--------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-------------------------------+---------+---+----+------+-----+---------+
+    |              Name             | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +-------------------------------+---------+---+----+------+-----+---------+
+    |img1_Im_data_stream_s_fifo_U   |        0|  5|  76|     4|   64|      256|
+    |img1_Re_data_stream_s_fifo_U   |        0|  5|  76|     4|   64|      256|
+    |img1_data_stream_0_s_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img1_data_stream_1_s_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img2_Im_data_stream_s_fifo_U   |        0|  5|  76|     4|   64|      256|
+    |img2_Re_data_stream_s_fifo_U   |        0|  5|  76|     4|   64|      256|
+    |img2_data_stream_0_s_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img2_data_stream_1_s_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img_result1_data_str_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img_result2_data_str_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img_result3_data_str_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img_result4_data_str_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img_result5_data_str_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img_result6_data_str_fifo_U    |        0|  5|  76|     4|   64|      256|
+    |img_result_data_stre_1_fifo_U  |        0|  5|  76|     4|   64|      256|
+    |img_result_data_stre_fifo_U    |        0|  5|  76|     4|   64|      256|
+    +-------------------------------+---------+---+----+------+-----+---------+
+    |Total                          |        0| 80|1216|    64| 1024|     4096|
+    +-------------------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |i_V_fu_363_p2                      |     +    |      0|  0|  39|          32|           1|
+    |j_V_fu_374_p2                      |     +    |      0|  0|  39|          32|           1|
+    |ap_block_pp0_stage0_01001          |    and   |      0|  0|   2|           1|           1|
+    |exitcond4_i_fu_358_p2              |   icmp   |      0|  0|  18|          32|          32|
+    |exitcond_i_fu_369_p2               |   icmp   |      0|  0|  18|          32|          32|
+    |ap_block_state10_on_subcall_done   |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state15_pp0_stage0_iter1  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_on_subcall_done    |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state8_on_subcall_done    |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                      |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1            |    xor   |      0|  0|   2|           2|           1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0| 128|         136|          74|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------------------+----+-----------+-----+-----------+
+    |                           Name                          | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                                |  85|         17|    1|         17|
+    |ap_enable_reg_pp0_iter1                                  |  15|          3|    1|          3|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_data_V_dout     |   9|          2|  128|        256|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_data_V_empty_n  |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_dest_V_dout     |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_dest_V_empty_n  |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_id_V_dout       |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_id_V_empty_n    |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_keep_V_dout     |   9|          2|   16|         32|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_keep_V_empty_n  |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_last_V_dout     |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_last_V_empty_n  |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_strb_V_dout     |   9|          2|   16|         32|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_strb_V_empty_n  |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_user_V_dout     |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_AXI_video_strm_V_user_V_empty_n  |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_img_data_stream_0_V_full_n       |   9|          2|    1|          2|
+    |grp_AXIvideo2Mat_fu_295_img_data_stream_1_V_full_n       |   9|          2|    1|          2|
+    |grp_AddWeighted_fu_268_dst_data_stream_V_full_n          |   9|          2|    1|          2|
+    |grp_AddWeighted_fu_268_src1_data_stream_V_dout           |   9|          2|   64|        128|
+    |grp_AddWeighted_fu_268_src1_data_stream_V_empty_n        |   9|          2|    1|          2|
+    |grp_AddWeighted_fu_268_src2_data_stream_V_dout           |   9|          2|   64|        128|
+    |grp_AddWeighted_fu_268_src2_data_stream_V_empty_n        |   9|          2|    1|          2|
+    |grp_Mul_fu_277_dst_data_stream_V_full_n                  |   9|          2|    1|          2|
+    |grp_Mul_fu_277_src2_data_stream_V_dout                   |   9|          2|   64|        128|
+    |grp_Mul_fu_277_src2_data_stream_V_empty_n                |   9|          2|    1|          2|
+    |grp_Mul_fu_286_dst_data_stream_V_full_n                  |   9|          2|    1|          2|
+    |grp_Mul_fu_286_src2_data_stream_V_dout                   |   9|          2|   64|        128|
+    |grp_Mul_fu_286_src2_data_stream_V_empty_n                |   9|          2|    1|          2|
+    |grp_Split_fu_348_dst0_data_stream_V_full_n               |   9|          2|    1|          2|
+    |grp_Split_fu_348_dst1_data_stream_V_full_n               |   9|          2|    1|          2|
+    |grp_Split_fu_348_src_data_stream_0_V_dout                |   9|          2|   64|        128|
+    |grp_Split_fu_348_src_data_stream_0_V_empty_n             |   9|          2|    1|          2|
+    |grp_Split_fu_348_src_data_stream_1_V_dout                |   9|          2|   64|        128|
+    |grp_Split_fu_348_src_data_stream_1_V_empty_n             |   9|          2|    1|          2|
+    |img1_Im_data_stream_s_read                               |   9|          2|    1|          2|
+    |img1_Im_data_stream_s_write                              |   9|          2|    1|          2|
+    |img1_Re_data_stream_s_read                               |   9|          2|    1|          2|
+    |img1_Re_data_stream_s_write                              |   9|          2|    1|          2|
+    |img1_data_stream_0_s_read                                |   9|          2|    1|          2|
+    |img1_data_stream_0_s_write                               |   9|          2|    1|          2|
+    |img1_data_stream_1_s_read                                |   9|          2|    1|          2|
+    |img1_data_stream_1_s_write                               |   9|          2|    1|          2|
+    |img2_Im_data_stream_s_read                               |  15|          3|    1|          3|
+    |img2_Im_data_stream_s_write                              |   9|          2|    1|          2|
+    |img2_Re_data_stream_s_read                               |  15|          3|    1|          3|
+    |img2_Re_data_stream_s_write                              |   9|          2|    1|          2|
+    |img2_data_stream_0_s_read                                |   9|          2|    1|          2|
+    |img2_data_stream_0_s_write                               |   9|          2|    1|          2|
+    |img2_data_stream_1_s_read                                |   9|          2|    1|          2|
+    |img2_data_stream_1_s_write                               |   9|          2|    1|          2|
+    |img_result1_data_str_read                                |   9|          2|    1|          2|
+    |img_result1_data_str_write                               |   9|          2|    1|          2|
+    |img_result2_data_str_read                                |   9|          2|    1|          2|
+    |img_result2_data_str_write                               |   9|          2|    1|          2|
+    |img_result3_data_str_read                                |   9|          2|    1|          2|
+    |img_result3_data_str_write                               |   9|          2|    1|          2|
+    |img_result4_data_str_read                                |   9|          2|    1|          2|
+    |img_result4_data_str_write                               |   9|          2|    1|          2|
+    |img_result5_data_str_write                               |   9|          2|    1|          2|
+    |img_result6_data_str_write                               |   9|          2|    1|          2|
+    |img_result_axi_V_data_V_write                            |   9|          2|    1|          2|
+    |img_result_axi_V_dest_V_write                            |   9|          2|    1|          2|
+    |img_result_axi_V_id_V_write                              |   9|          2|    1|          2|
+    |img_result_axi_V_keep_V_write                            |   9|          2|    1|          2|
+    |img_result_axi_V_last_V_write                            |   9|          2|    1|          2|
+    |img_result_axi_V_strb_V_write                            |   9|          2|    1|          2|
+    |img_result_axi_V_user_V_write                            |   9|          2|    1|          2|
+    |img_result_data_stre_1_read                              |   9|          2|    1|          2|
+    |img_result_data_stre_read                                |   9|          2|    1|          2|
+    |img_src1_axi_V_data_V_read                               |   9|          2|    1|          2|
+    |img_src1_axi_V_dest_V_read                               |   9|          2|    1|          2|
+    |img_src1_axi_V_id_V_read                                 |   9|          2|    1|          2|
+    |img_src1_axi_V_keep_V_read                               |   9|          2|    1|          2|
+    |img_src1_axi_V_last_V_read                               |   9|          2|    1|          2|
+    |img_src1_axi_V_strb_V_read                               |   9|          2|    1|          2|
+    |img_src1_axi_V_user_V_read                               |   9|          2|    1|          2|
+    |img_src2_axi_V_data_V_read                               |   9|          2|    1|          2|
+    |img_src2_axi_V_dest_V_read                               |   9|          2|    1|          2|
+    |img_src2_axi_V_id_V_read                                 |   9|          2|    1|          2|
+    |img_src2_axi_V_keep_V_read                               |   9|          2|    1|          2|
+    |img_src2_axi_V_last_V_read                               |   9|          2|    1|          2|
+    |img_src2_axi_V_strb_V_read                               |   9|          2|    1|          2|
+    |img_src2_axi_V_user_V_read                               |   9|          2|    1|          2|
+    |t_V_1_reg_257                                            |   9|          2|   32|         64|
+    |t_V_reg_246                                              |   9|          2|   32|         64|
+    +---------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                    | 868|        190|  683|       1384|
+    +---------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+----+----+-----+-----------+
+    |                 Name                 | FF | LUT| Bits| Const Bits|
+    +--------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                             |  16|   0|   16|          0|
+    |ap_enable_reg_pp0_iter0               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1               |   1|   0|    1|          0|
+    |exitcond_i_reg_509                    |   1|   0|    1|          0|
+    |grp_AXIvideo2Mat_fu_295_ap_start_reg  |   1|   0|    1|          0|
+    |grp_AddWeighted_fu_268_ap_start_reg   |   1|   0|    1|          0|
+    |grp_Mat2AXIvideo_fu_326_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Mul_fu_277_ap_start_reg           |   1|   0|    1|          0|
+    |grp_Mul_fu_286_ap_start_reg           |   1|   0|    1|          0|
+    |grp_Split_fu_348_ap_start_reg         |   1|   0|    1|          0|
+    |i_V_reg_504                           |  32|   0|   32|          0|
+    |t_V_1_reg_257                         |  32|   0|   32|          0|
+    |t_V_reg_246                           |  32|   0|   32|          0|
+    +--------------------------------------+----+----+-----+-----------+
+    |Total                                 | 121|   0|  121|          0|
+    +--------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk                          |  in |    1| ap_ctrl_hs |        array_mul        | return value |
+|ap_rst                          |  in |    1| ap_ctrl_hs |        array_mul        | return value |
+|ap_start                        |  in |    1| ap_ctrl_hs |        array_mul        | return value |
+|ap_done                         | out |    1| ap_ctrl_hs |        array_mul        | return value |
+|ap_idle                         | out |    1| ap_ctrl_hs |        array_mul        | return value |
+|ap_ready                        | out |    1| ap_ctrl_hs |        array_mul        | return value |
+|img_src1_axi_V_data_V_dout      |  in |  128|   ap_fifo  |  img_src1_axi_V_data_V  |    pointer   |
+|img_src1_axi_V_data_V_empty_n   |  in |    1|   ap_fifo  |  img_src1_axi_V_data_V  |    pointer   |
+|img_src1_axi_V_data_V_read      | out |    1|   ap_fifo  |  img_src1_axi_V_data_V  |    pointer   |
+|img_src1_axi_V_keep_V_dout      |  in |   16|   ap_fifo  |  img_src1_axi_V_keep_V  |    pointer   |
+|img_src1_axi_V_keep_V_empty_n   |  in |    1|   ap_fifo  |  img_src1_axi_V_keep_V  |    pointer   |
+|img_src1_axi_V_keep_V_read      | out |    1|   ap_fifo  |  img_src1_axi_V_keep_V  |    pointer   |
+|img_src1_axi_V_strb_V_dout      |  in |   16|   ap_fifo  |  img_src1_axi_V_strb_V  |    pointer   |
+|img_src1_axi_V_strb_V_empty_n   |  in |    1|   ap_fifo  |  img_src1_axi_V_strb_V  |    pointer   |
+|img_src1_axi_V_strb_V_read      | out |    1|   ap_fifo  |  img_src1_axi_V_strb_V  |    pointer   |
+|img_src1_axi_V_user_V_dout      |  in |    1|   ap_fifo  |  img_src1_axi_V_user_V  |    pointer   |
+|img_src1_axi_V_user_V_empty_n   |  in |    1|   ap_fifo  |  img_src1_axi_V_user_V  |    pointer   |
+|img_src1_axi_V_user_V_read      | out |    1|   ap_fifo  |  img_src1_axi_V_user_V  |    pointer   |
+|img_src1_axi_V_last_V_dout      |  in |    1|   ap_fifo  |  img_src1_axi_V_last_V  |    pointer   |
+|img_src1_axi_V_last_V_empty_n   |  in |    1|   ap_fifo  |  img_src1_axi_V_last_V  |    pointer   |
+|img_src1_axi_V_last_V_read      | out |    1|   ap_fifo  |  img_src1_axi_V_last_V  |    pointer   |
+|img_src1_axi_V_id_V_dout        |  in |    1|   ap_fifo  |   img_src1_axi_V_id_V   |    pointer   |
+|img_src1_axi_V_id_V_empty_n     |  in |    1|   ap_fifo  |   img_src1_axi_V_id_V   |    pointer   |
+|img_src1_axi_V_id_V_read        | out |    1|   ap_fifo  |   img_src1_axi_V_id_V   |    pointer   |
+|img_src1_axi_V_dest_V_dout      |  in |    1|   ap_fifo  |  img_src1_axi_V_dest_V  |    pointer   |
+|img_src1_axi_V_dest_V_empty_n   |  in |    1|   ap_fifo  |  img_src1_axi_V_dest_V  |    pointer   |
+|img_src1_axi_V_dest_V_read      | out |    1|   ap_fifo  |  img_src1_axi_V_dest_V  |    pointer   |
+|img_src2_axi_V_data_V_dout      |  in |  128|   ap_fifo  |  img_src2_axi_V_data_V  |    pointer   |
+|img_src2_axi_V_data_V_empty_n   |  in |    1|   ap_fifo  |  img_src2_axi_V_data_V  |    pointer   |
+|img_src2_axi_V_data_V_read      | out |    1|   ap_fifo  |  img_src2_axi_V_data_V  |    pointer   |
+|img_src2_axi_V_keep_V_dout      |  in |   16|   ap_fifo  |  img_src2_axi_V_keep_V  |    pointer   |
+|img_src2_axi_V_keep_V_empty_n   |  in |    1|   ap_fifo  |  img_src2_axi_V_keep_V  |    pointer   |
+|img_src2_axi_V_keep_V_read      | out |    1|   ap_fifo  |  img_src2_axi_V_keep_V  |    pointer   |
+|img_src2_axi_V_strb_V_dout      |  in |   16|   ap_fifo  |  img_src2_axi_V_strb_V  |    pointer   |
+|img_src2_axi_V_strb_V_empty_n   |  in |    1|   ap_fifo  |  img_src2_axi_V_strb_V  |    pointer   |
+|img_src2_axi_V_strb_V_read      | out |    1|   ap_fifo  |  img_src2_axi_V_strb_V  |    pointer   |
+|img_src2_axi_V_user_V_dout      |  in |    1|   ap_fifo  |  img_src2_axi_V_user_V  |    pointer   |
+|img_src2_axi_V_user_V_empty_n   |  in |    1|   ap_fifo  |  img_src2_axi_V_user_V  |    pointer   |
+|img_src2_axi_V_user_V_read      | out |    1|   ap_fifo  |  img_src2_axi_V_user_V  |    pointer   |
+|img_src2_axi_V_last_V_dout      |  in |    1|   ap_fifo  |  img_src2_axi_V_last_V  |    pointer   |
+|img_src2_axi_V_last_V_empty_n   |  in |    1|   ap_fifo  |  img_src2_axi_V_last_V  |    pointer   |
+|img_src2_axi_V_last_V_read      | out |    1|   ap_fifo  |  img_src2_axi_V_last_V  |    pointer   |
+|img_src2_axi_V_id_V_dout        |  in |    1|   ap_fifo  |   img_src2_axi_V_id_V   |    pointer   |
+|img_src2_axi_V_id_V_empty_n     |  in |    1|   ap_fifo  |   img_src2_axi_V_id_V   |    pointer   |
+|img_src2_axi_V_id_V_read        | out |    1|   ap_fifo  |   img_src2_axi_V_id_V   |    pointer   |
+|img_src2_axi_V_dest_V_dout      |  in |    1|   ap_fifo  |  img_src2_axi_V_dest_V  |    pointer   |
+|img_src2_axi_V_dest_V_empty_n   |  in |    1|   ap_fifo  |  img_src2_axi_V_dest_V  |    pointer   |
+|img_src2_axi_V_dest_V_read      | out |    1|   ap_fifo  |  img_src2_axi_V_dest_V  |    pointer   |
+|img_result_axi_V_data_V_din     | out |  128|   ap_fifo  | img_result_axi_V_data_V |    pointer   |
+|img_result_axi_V_data_V_full_n  |  in |    1|   ap_fifo  | img_result_axi_V_data_V |    pointer   |
+|img_result_axi_V_data_V_write   | out |    1|   ap_fifo  | img_result_axi_V_data_V |    pointer   |
+|img_result_axi_V_keep_V_din     | out |   16|   ap_fifo  | img_result_axi_V_keep_V |    pointer   |
+|img_result_axi_V_keep_V_full_n  |  in |    1|   ap_fifo  | img_result_axi_V_keep_V |    pointer   |
+|img_result_axi_V_keep_V_write   | out |    1|   ap_fifo  | img_result_axi_V_keep_V |    pointer   |
+|img_result_axi_V_strb_V_din     | out |   16|   ap_fifo  | img_result_axi_V_strb_V |    pointer   |
+|img_result_axi_V_strb_V_full_n  |  in |    1|   ap_fifo  | img_result_axi_V_strb_V |    pointer   |
+|img_result_axi_V_strb_V_write   | out |    1|   ap_fifo  | img_result_axi_V_strb_V |    pointer   |
+|img_result_axi_V_user_V_din     | out |    1|   ap_fifo  | img_result_axi_V_user_V |    pointer   |
+|img_result_axi_V_user_V_full_n  |  in |    1|   ap_fifo  | img_result_axi_V_user_V |    pointer   |
+|img_result_axi_V_user_V_write   | out |    1|   ap_fifo  | img_result_axi_V_user_V |    pointer   |
+|img_result_axi_V_last_V_din     | out |    1|   ap_fifo  | img_result_axi_V_last_V |    pointer   |
+|img_result_axi_V_last_V_full_n  |  in |    1|   ap_fifo  | img_result_axi_V_last_V |    pointer   |
+|img_result_axi_V_last_V_write   | out |    1|   ap_fifo  | img_result_axi_V_last_V |    pointer   |
+|img_result_axi_V_id_V_din       | out |    1|   ap_fifo  |  img_result_axi_V_id_V  |    pointer   |
+|img_result_axi_V_id_V_full_n    |  in |    1|   ap_fifo  |  img_result_axi_V_id_V  |    pointer   |
+|img_result_axi_V_id_V_write     | out |    1|   ap_fifo  |  img_result_axi_V_id_V  |    pointer   |
+|img_result_axi_V_dest_V_din     | out |    1|   ap_fifo  | img_result_axi_V_dest_V |    pointer   |
+|img_result_axi_V_dest_V_full_n  |  in |    1|   ap_fifo  | img_result_axi_V_dest_V |    pointer   |
+|img_result_axi_V_dest_V_write   | out |    1|   ap_fifo  | img_result_axi_V_dest_V |    pointer   |
+|rows                            |  in |   32|   ap_none  |           rows          |    scalar    |
+|cols                            |  in |   32|   ap_none  |           cols          |    scalar    |
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+

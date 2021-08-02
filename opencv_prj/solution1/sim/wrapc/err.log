@@ -1,0 +1,26 @@
+In file included from D:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from D:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166,
+                 from D:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from D:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from D:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from apatb_array_mul.cpp:17:
+D:/Xilinx/Vivado/2018.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from D:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166:0,
+                 from D:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from D:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from D:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from apatb_array_mul.cpp:17:
+D:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+D:/hls_OpenCV/opencv_prj/src/cpu_test.cpp: In function 'int image_mosaic(IplImage*, IplImage*)':
+D:/hls_OpenCV/opencv_prj/src/cpu_test.cpp:256:43: error: invalid initialization of reference of type 'hls::stream<ap_axiu<128, 1, 1, 1> >&' from expression of type 'IplImage* {aka _IplImage*}'
+  array_mul(image_Fourier_2,image_Fourier_1,image_Mul);
+                                           ^
+In file included from D:/hls_OpenCV/opencv_prj/src/cpu_test.cpp:226:0:
+apatb_array_mul.h:9:13: note: in passing argument 1 of 'void AESL_WRAP_array_mul(hls::stream<ap_axiu<128, 1, 1, 1> >&, hls::stream<ap_axiu<128, 1, 1, 1> >&, hls::stream<ap_axiu<128, 1, 1, 1> >&, int, int)'
+ extern void AESL_WRAP_array_mul (
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [obj/cpu_test.cpp_pre.cpp.tb.o] Error 1

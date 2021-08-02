@@ -1,0 +1,126 @@
+
+
+================================================================
+== Vivado HLS Report for 'Sobel'
+================================================================
+* Date:           Wed Jul 28 22:30:25 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        image_filter_prj
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a75tfgg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.698|        0.12|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+---------+-----+---------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    | min |   max   | min |   max   |   Type  |
+    +-----+---------+-----+---------+---------+
+    |  158|  2089112|  158|  2089112|   none  |
+    +-----+---------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%p_src_cols_V_read = call i32 @_ssdm_op_Read.ap_stable.i32(i32 %p_src_cols_V)"   --->   Operation 3 'read' 'p_src_cols_V_read' <Predicate = true> <Delay = 0.00> <Core = "AXI4LiteS">   --->   Core 6 'AXI4LiteS' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_src_rows_V_read = call i32 @_ssdm_op_Read.ap_stable.i32(i32 %p_src_rows_V)"   --->   Operation 4 'read' 'p_src_rows_V_read' <Predicate = true> <Delay = 0.00> <Core = "AXI4LiteS">   --->   Core 6 'AXI4LiteS' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 5 [2/2] (0.00ns)   --->   "call fastcc void @Filter2D(i32 %p_src_rows_V_read, i32 %p_src_cols_V_read, i8* %p_src_data_stream_0_V, i8* %p_src_data_stream_1_V, i8* %p_src_data_stream_2_V, i8* %p_dst_data_stream_0_V, i8* %p_dst_data_stream_1_V, i8* %p_dst_data_stream_2_V)" [D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599]   --->   Operation 5 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecIFCore(i32 %p_src_cols_V, [1 x i8]* @p_str3, [10 x i8]* @p_str4, [1 x i8]* @p_str3, i32 -1, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [24 x i8]* @p_str5)"   --->   Operation 6 'specifcore' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecIFCore(i32 %p_src_rows_V, [1 x i8]* @p_str3, [10 x i8]* @p_str4, [1 x i8]* @p_str3, i32 -1, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [24 x i8]* @p_str5)"   --->   Operation 7 'specifcore' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str269, i32 0, i32 0, [1 x i8]* @p_str270, [1 x i8]* @p_str271, [1 x i8]* @p_str272, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str273, [1 x i8]* @p_str274)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str262, i32 0, i32 0, [1 x i8]* @p_str263, [1 x i8]* @p_str264, [1 x i8]* @p_str265, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str266, [1 x i8]* @p_str267)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str255, i32 0, i32 0, [1 x i8]* @p_str256, [1 x i8]* @p_str257, [1 x i8]* @p_str258, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str259, [1 x i8]* @p_str260)"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str248, i32 0, i32 0, [1 x i8]* @p_str249, [1 x i8]* @p_str250, [1 x i8]* @p_str251, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str252, [1 x i8]* @p_str253)"   --->   Operation 11 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str241, i32 0, i32 0, [1 x i8]* @p_str242, [1 x i8]* @p_str243, [1 x i8]* @p_str244, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str245, [1 x i8]* @p_str246)"   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str234, i32 0, i32 0, [1 x i8]* @p_str235, [1 x i8]* @p_str236, [1 x i8]* @p_str237, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str238, [1 x i8]* @p_str239)"   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %p_src_cols_V, [10 x i8]* @ap_stable_str, i32 0, i32 0, [1 x i8]* @p_str149, i32 0, i32 0, [1 x i8]* @p_str150, [1 x i8]* @p_str151, [1 x i8]* @p_str152, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str153, [1 x i8]* @p_str154)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %p_src_rows_V, [10 x i8]* @ap_stable_str, i32 0, i32 0, [1 x i8]* @p_str155, i32 0, i32 0, [1 x i8]* @p_str156, [1 x i8]* @p_str157, [1 x i8]* @p_str158, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str159, [1 x i8]* @p_str160)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/2] (0.00ns)   --->   "call fastcc void @Filter2D(i32 %p_src_rows_V_read, i32 %p_src_cols_V_read, i8* %p_src_data_stream_0_V, i8* %p_src_data_stream_1_V, i8* %p_src_data_stream_2_V, i8* %p_dst_data_stream_0_V, i8* %p_dst_data_stream_1_V, i8* %p_dst_data_stream_2_V)" [D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599]   --->   Operation 16 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "ret void" [D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2600]   --->   Operation 17 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.125ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation."/>
+	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-302]" key="COSIM_TCL_302_1177" tag="" content="Starting C TB testing ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-333]" key="COSIM_TCL_333_1204" tag="" content="Generating C post check test bench ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-12]" key="COSIM_TCL_12_1082" tag="" content="Generating RTL test bench ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-323]" key="COSIM_TCL_323_1195" tag="" content="Starting verilog simulation."/>
+	<Message severity="INFO" prefix="[COSIM 212-316]" key="COSIM_316_1054" tag="" content="Starting C post checking ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;zhangyue&apos; on host &apos;laptop-ngd1h6kk&apos; (Windows NT_amd64 version 6.2) on Wed Jul 28 22:34:16 +0800 2021"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;D:/hls_OpenCV/image_filter_prj/solution1/sim/wrapc_pc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;zhangyue&apos; on host &apos;laptop-ngd1h6kk&apos; (Windows NT_amd64 version 6.2) on Wed Jul 28 22:34:16 +0800 2021"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;D:/hls_OpenCV/image_filter_prj/solution1/sim/verilog&apos;"/>
+</Messages>
+) on Wed Jul 28 22:34:16 +0800 2021"/>
+</Messages>

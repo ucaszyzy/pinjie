@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <simLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <simLog>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened&#xD;&#xA;// RTL Simulation : 1 / 1 [100.00%] @ &quot;20949285000&quot;&#xD;&#xA;////////////////////////////////////////////////////////////////////////////////////&#xD;&#xA;$finish called at time : 20949325 ns : File &quot;D:/hls_OpenCV/image_filter_prj/solution1/sim/verilog/image_filter.autotb.v&quot; Line 476&#xD;&#xA;run: Time (s): cpu = 00:00:02 ; elapsed = 00:08:02 . Memory (MB): peak = 212.086 ; gain = 0.000&#xD;&#xA;## quit" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:42:48.085+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.450+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.448+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.446+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.443+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.441+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.439+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.436+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.434+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.431+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.429+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.427+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.424+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.422+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.420+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.418+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.416+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.414+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.412+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.410+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.407+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.405+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.403+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.401+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.399+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.397+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.395+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.393+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.391+0800" type="Warning"/>
+        <logs message="WARNING: file ../wrapc_tv/com_wrapc.tcl could not be opened" projectName="image_filter_prj" solutionName="solution1" date="2021-07-28T22:38:08.389+0800" type="Warning"/>
+      </simLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

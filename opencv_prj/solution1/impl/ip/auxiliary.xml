@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="array_mul" xd:componentRef="array_mul" xd:initiationInterval="16652545" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="img_src1_axi.data" xd:originalName="img_src1_axi" xd:direction="in" xd:interfaceRef="img_src1_axi_V_data_V" xd:busTypeRef="acc_fifo" xd:dataWidth="128"/>
+  <xd:arg xd:name="img_src1_axi.keep" xd:originalName="img_src1_axi" xd:direction="in" xd:interfaceRef="img_src1_axi_V_keep_V" xd:busTypeRef="acc_fifo" xd:dataWidth="16"/>
+  <xd:arg xd:name="img_src1_axi.strb" xd:originalName="img_src1_axi" xd:direction="in" xd:interfaceRef="img_src1_axi_V_strb_V" xd:busTypeRef="acc_fifo" xd:dataWidth="16"/>
+  <xd:arg xd:name="img_src1_axi.user" xd:originalName="img_src1_axi" xd:direction="in" xd:interfaceRef="img_src1_axi_V_user_V" xd:busTypeRef="acc_fifo" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_src1_axi.last" xd:originalName="img_src1_axi" xd:direction="in" xd:interfaceRef="img_src1_axi_V_last_V" xd:busTypeRef="acc_fifo" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_src1_axi.id" xd:originalName="img_src1_axi" xd:direction="in" xd:interfaceRef="img_src1_axi_V_id_V" xd:busTypeRef="acc_fifo" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_src1_axi.dest" xd:originalName="img_src1_axi" xd:direction="in" xd:interfaceRef="img_src1_axi_V_dest_V" xd:busTypeRef="acc_fifo" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_src2_axi.data" xd:originalName="img_src2_axi" xd:direction="in" xd:interfaceRef="img_src2_axi_V_data_V" xd:busTypeRef="acc_fifo" xd:dataWidth="128"/>
+  <xd:arg xd:name="img_src2_axi.keep" xd:originalName="img_src2_axi" xd:direction="in" xd:interfaceRef="img_src2_axi_V_keep_V" xd:busTypeRef="acc_fifo" xd:dataWidth="16"/>
+  <xd:arg xd:name="img_src2_axi.strb" xd:originalName="img_src2_axi" xd:direction="in" xd:interfaceRef="img_src2_axi_V_strb_V" xd:busTypeRef="acc_fifo" xd:dataWidth="16"/>
+  <xd:arg xd:name="img_src2_axi.user" xd:originalName="img_src2_axi" xd:direction="in" xd:interfaceRef="img_src2_axi_V_user_V" xd:busTypeRef="acc_fifo" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_src2_axi.last" xd:originalName="img_src2_axi" xd:direction="in" xd:interfaceRef="img_src2_axi_V_last_V" xd:busTypeRef="acc_fifo" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_src2_axi.id" xd:originalName="img_src2_axi" xd:direction="in" xd:interfaceRef="img_src2_axi_V_id_V" xd:busTypeRef="acc_fifo" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_src2_axi.dest" xd:originalName="img_src2_axi" xd:direction="in" xd:interfaceRef="img_src2_axi_V_dest_V" xd:busTypeRef="acc_fifo" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_result_axi.data" xd:originalName="img_result_axi" xd:direction="out" xd:interfaceRef="img_result_axi_V_data_V" xd:busTypeRef="acc_fifo" xd:firstOut="3" xd:dataWidth="128"/>
+  <xd:arg xd:name="img_result_axi.keep" xd:originalName="img_result_axi" xd:direction="out" xd:interfaceRef="img_result_axi_V_keep_V" xd:busTypeRef="acc_fifo" xd:firstOut="3" xd:dataWidth="16"/>
+  <xd:arg xd:name="img_result_axi.strb" xd:originalName="img_result_axi" xd:direction="out" xd:interfaceRef="img_result_axi_V_strb_V" xd:busTypeRef="acc_fifo" xd:firstOut="3" xd:dataWidth="16"/>
+  <xd:arg xd:name="img_result_axi.user" xd:originalName="img_result_axi" xd:direction="out" xd:interfaceRef="img_result_axi_V_user_V" xd:busTypeRef="acc_fifo" xd:firstOut="3" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_result_axi.last" xd:originalName="img_result_axi" xd:direction="out" xd:interfaceRef="img_result_axi_V_last_V" xd:busTypeRef="acc_fifo" xd:firstOut="3" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_result_axi.id" xd:originalName="img_result_axi" xd:direction="out" xd:interfaceRef="img_result_axi_V_id_V" xd:busTypeRef="acc_fifo" xd:firstOut="3" xd:dataWidth="1"/>
+  <xd:arg xd:name="img_result_axi.dest" xd:originalName="img_result_axi" xd:direction="out" xd:interfaceRef="img_result_axi_V_dest_V" xd:busTypeRef="acc_fifo" xd:firstOut="3" xd:dataWidth="1"/>
+  <xd:arg xd:name="rows" xd:originalName="rows" xd:direction="in" xd:interfaceRef="rows" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32" xd:firstOut="3"/>
+  <xd:arg xd:name="cols" xd:originalName="cols" xd:direction="in" xd:interfaceRef="cols" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32" xd:firstOut="3"/>
+  <xd:latencyEstimates xd:best-case="24" xd:worst-case="16652544" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="7393" xd:FF="4017" xd:BRAM="0" xd:DSP="28"/>
+</xd:acceleratorMap>

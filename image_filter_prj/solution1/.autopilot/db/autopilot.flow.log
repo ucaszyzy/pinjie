@@ -1,0 +1,1608 @@
+INFO-FLOW: Workspace D:/hls_OpenCV/image_filter_prj/solution1 opened at Wed Jul 28 22:29:57 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.125 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.125ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.124 sec.
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.126 sec.
+Command     ap_source done; 0.127 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a75tfgg484-1 
+Execute       add_library xilinx/artix7/artix7:xc7a75t:fgg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a75t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 11800} {LUT 47200}     {FF 94400}  {DSP48E 180}    {BRAM 210}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7a75tfgg484-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 11800} {LUT 47200}     {FF 94400}  {DSP48E 180}    {BRAM 210}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.231 sec.
+Execute   set_part xc7a75tfgg484-1 -tool vivado 
+Execute     add_library xilinx/artix7/artix7:xc7a75t:fgg484:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7a75t 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 11800} {LUT 47200}     {FF 94400}  {DSP48E 180}    {BRAM 210}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/artix7/artix7_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   set_clock_uncertainty 0.125 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'src/image_filter.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling src/image_filter.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted src/image_filter.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "src/image_filter.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E src/image_filter.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.2/common/technology/autopilot -I D:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp
+Command       clang done; 0.805 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp"  -o "D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.2/common/technology/autopilot -I D:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.595 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp std=gnu++98 -directive=D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.894 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp std=gnu++98 -directive=D:/hls_OpenCV/image_filter_prj/solution1/solution1.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/hls_OpenCV/image_filter_prj/solution1/solution1.json -quiet -fix-errors D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.876 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.image_filter.pp.0.cpp.diag.yml D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.image_filter.pp.0.cpp.out.log 2> D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.image_filter.pp.0.cpp.err.log 
+Command       ap_eval done; 0.86 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.912 sec.
+INFO-FLOW: tidy-3.1 time 3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.892 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pragma.2.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.2/common/technology/autopilot -I D:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pragma.2.cpp
+Command       clang done; 0.751 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.2/common/technology/autopilot -I D:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.bc
+Command       clang done; 2.797 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.g.bc -hls-opt -except-internalize image_filter -LD:/Xilinx/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.037 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 102.812 ; gain = 47.086
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 102.812 ; gain = 47.086
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.pp.bc -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 0.14 sec.
+Execute         llvm-ld D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Xilinx/Vivado/2018.2/win64/lib -lfloatconversion -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.691 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top image_filter -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.g.0.bc -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 4096>::init' into 'hls::Mat<1080, 1920, 4096>::Mat.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:587).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<32, unsigned char>.1' into 'hls::AXIGetBitFields<32, unsigned char>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:71).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<32, unsigned char>' into 'hls::AXIvideo2Mat<32, 1080, 1920, 4096>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:92).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 4096>::write' into 'hls::Mat<1080, 1920, 4096>::operator<<' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:662).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 4096>::operator<<' into 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:436).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 4096>::operator<<' into 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:436).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 4096>::operator<<' into 'hls::AXIvideo2Mat<32, 1080, 1920, 4096>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:94).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<1, 3, ap_int<8> >::getval' into 'hls::Window<1, 3, ap_int<8> >::operator()' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<1, 3, ap_int<8> >::operator()' into 'hls::Sobel_kernel<1, 0, 3, ap_int<8> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2565).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<1, 3, ap_int<8> >::operator()' into 'hls::Sobel_kernel<1, 0, 3, ap_int<8> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2573).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, ap_int<8> >::getval' into 'hls::Window<3, 1, ap_int<8> >::operator()' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, ap_int<8> >::operator()' into 'hls::Sobel_kernel<1, 0, 3, ap_int<8> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2567).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, ap_int<8> >::operator()' into 'hls::Sobel_kernel<1, 0, 3, ap_int<8> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2573).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, ap_int<8> >::getval' into 'hls::Window<3, 3, ap_int<8> >::operator()' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, ap_int<8> >::operator()' into 'hls::Sobel_kernel<1, 0, 3, ap_int<8> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2573).
+INFO: [XFORM 203-603] Inlining function 'hls::normalizeAnchor<int, int>' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:422).
+INFO: [XFORM 203-603] Inlining function 'hls::normalizeAnchor<int, int>' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:422).
+INFO: [XFORM 203-603] Inlining function 'hls::normalizeAnchor<int, int>' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:422).
+INFO: [XFORM 203-603] Inlining function 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::get_parameters<3, 3, int>' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:432).
+INFO: [XFORM 203-603] Inlining function 'hls::borderInterpolate' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:504).
+INFO: [XFORM 203-603] Inlining function 'hls::borderInterpolate' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:468).
+INFO: [XFORM 203-603] Inlining function 'hls::borderInterpolate' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:450).
+INFO: [XFORM 203-603] Inlining function 'hls::borderInterpolate' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:504).
+INFO: [XFORM 203-603] Inlining function 'hls::borderInterpolate' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:468).
+INFO: [XFORM 203-603] Inlining function 'hls::borderInterpolate' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:450).
+INFO: [XFORM 203-603] Inlining function 'hls::borderInterpolate' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:504).
+INFO: [XFORM 203-603] Inlining function 'hls::borderInterpolate' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:468).
+INFO: [XFORM 203-603] Inlining function 'hls::borderInterpolate' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:450).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::getval' into 'hls::Window<3, 3, unsigned char>::operator()' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:505).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:482).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:479).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:479).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:456).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:505).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:482).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:479).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:479).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:456).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:505).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:482).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:479).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:479).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:456).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::getval' into 'hls::Window<3, 1, unsigned char>::operator()' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:456).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:482).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:505).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:456).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:482).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:505).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:456).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:482).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 1, unsigned char>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:505).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::getval' into 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:843).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:491).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:487).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:487).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:470).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:491).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:487).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:487).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:470).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:491).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:487).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:487).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:470).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<6, 1920, unsigned char, 0>::operator()' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:458).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::shift_pixels_right' into 'hls::Window<3, 3, unsigned char>::shift_right' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:543).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::shift_right' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:497).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::shift_right' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:497).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, unsigned char>::shift_right' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:497).
+INFO: [XFORM 203-603] Inlining function 'hls::filter2d_kernel::apply<unsigned char, ap_fixed<20, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_int<8>, 3, 3>' into 'hls::filter2d_kernel::apply<unsigned char, unsigned char, ap_int<8>, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:301).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<8, 8, false, (ap_q_mode)0, (ap_o_mode)0, 0>::ap_fixed_base<20, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+INFO: [XFORM 203-603] Inlining function 'hls::filter2d_kernel::apply<unsigned char, unsigned char, ap_int<8>, 3, 3>' into 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512).
+INFO: [XFORM 203-603] Inlining function 'hls::filter_opr<hls::filter2d_kernel, hls::BORDER_DEFAULT>::filter<4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' into 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 4096>::read' into 'hls::Mat<1080, 1920, 4096>::operator>>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:656).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 4096>::operator>>' into 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:430).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 4096>::operator>>' into 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:430).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 4096>::operator>>' into 'hls::Mat2AXIvideo<32, 1080, 1920, 4096>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:140).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 8, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<8, 8, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<41, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 8, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<8, 8, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<9, 9, true, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+INFO: [XFORM 203-603] Inlining function 'hls::kernel_sub::apply<unsigned char, unsigned char, unsigned char, int>' into 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:433).
+INFO: [XFORM 203-603] Inlining function 'hls::kernel_scale::apply<unsigned char, unsigned char, unsigned char, int>' into 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:433).
+INFO: [XFORM 203-603] Inlining function 'hls::getStructuringElement<unsigned char, int, int, 3, 3>' into 'hls::morp_opr<hls::erode_kernel, hls::BORDER_REPLICATE, 4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1180).
+INFO: [XFORM 203-603] Inlining function 'hls::getStructuringElement<unsigned char, int, int, 3, 3>' into 'hls::morp_opr<hls::dilate_kernel, hls::BORDER_REPLICATE, 4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1180).
+INFO: [XFORM 203-603] Inlining function 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::get_parameters<3, 3, int>' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:432).
+INFO: [XFORM 203-603] Inlining function 'hls::erode_kernel::apply<unsigned char, unsigned char, unsigned char, 3, 3>' into 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512).
+INFO: [XFORM 203-603] Inlining function 'hls::filter_opr<hls::erode_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' into 'hls::morp_opr<hls::erode_kernel, hls::BORDER_REPLICATE, 4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1182).
+INFO: [XFORM 203-603] Inlining function 'hls::morp_opr<hls::erode_kernel, hls::BORDER_REPLICATE, 4096, 4096, 1080, 1920>' into 'hls::Erode<4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1227).
+INFO: [XFORM 203-603] Inlining function 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::get_parameters<3, 3, int>' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:432).
+INFO: [XFORM 203-603] Inlining function 'hls::dilate_kernel::apply<unsigned char, unsigned char, unsigned char, 3, 3>' into 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512).
+INFO: [XFORM 203-603] Inlining function 'hls::filter_opr<hls::dilate_kernel, hls::BORDER_REPLICATE>::filter<4096, 4096, unsigned char, int, 1080, 1920, 3, 3>' into 'hls::morp_opr<hls::dilate_kernel, hls::BORDER_REPLICATE, 4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1182).
+INFO: [XFORM 203-603] Inlining function 'hls::morp_opr<hls::dilate_kernel, hls::BORDER_REPLICATE, 4096, 4096, 1080, 1920>' into 'hls::Dilate<4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1250).
+INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<32, unsigned char>.1' into 'hls::AXISetBitFields<32, unsigned char>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:100).
+INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<32, unsigned char>' into 'hls::Mat2AXIvideo<32, 1080, 1920, 4096>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:143).
+Command         transform done; 1.421 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 154.031 ; gain = 98.305
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.g.1.bc -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<20, 20, (ap_q_mode)5, (ap_o_mode)3>' into 'hls::sr_cast<unsigned char, ap_fixed<20, 20, (ap_q_mode)5, (ap_o_mode)3, 0> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::assert_cn' into 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1274) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, ap_fixed<20, 20, (ap_q_mode)5, (ap_o_mode)3, 0> >' into 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:302->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::Sobel<1, 0, 3, hls::BORDER_DEFAULT, 4096, 4096, 1080, 1920, 1080, 1920>' into 'hls::Sobel<1, 0, 3, 4096, 4096, 1080, 1920, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<9>' into 'hls::sr_cast<unsigned char, ap_int<9> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, ap_int<9> >' into 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:230->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:433) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<41>' into 'hls::sr_cast<unsigned char, ap_int<41> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, ap_int<41> >' into 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:208->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:433) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::numeric_limits<unsigned char>::max' into 'hls::numeric_limits<unsigned char>::max' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/utils/x_hls_utils.h:75) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::assert_cn' into 'hls::Erode<4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1226) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::numeric_limits<unsigned char>::max' into 'hls::Erode<4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:151->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1182->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1227) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::numeric_limits<unsigned char>::min' into 'hls::numeric_limits<unsigned char>::min' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/utils/x_hls_utils.h:76) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::assert_cn' into 'hls::Dilate<4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1249) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::numeric_limits<unsigned char>::min' into 'hls::Dilate<4096, 4096, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:177->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1182->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1250) automatically.
+Command         transform done; 0.752 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:78: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+Command         transform done; 0.173 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 183.504 ; gain = 127.777
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.g.1.bc to D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.o.1.bc -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_2.data_stream.V' (src/image_filter.cpp:12).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_3.data_stream.V' (src/image_filter.cpp:13).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_0.data_stream.V' (src/image_filter.cpp:10).
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:427) in function 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:427) in function 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:126) in function 'hls::Mat2AXIvideo<32, 1080, 1920, 4096>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:442) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:442) in function 'hls::Erode<4096, 4096, 1080, 1920>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:442) in function 'hls::Dilate<4096, 4096, 1080, 1920>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:73) in function 'hls::AXIvideo2Mat<32, 1080, 1920, 4096>' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:622) in function 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_channels' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:431) in function 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.3' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:646) in function 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:622) in function 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_channels' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:431) in function 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.3' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:646) in function 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:622) in function 'hls::Mat2AXIvideo<32, 1080, 1920, 4096>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_channels' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:142) in function 'hls::Mat2AXIvideo<32, 1080, 1920, 4096>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'channelloop' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:448) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:454) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1.2' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:467) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1.3' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:476) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1.3.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:477) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1.4' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:485) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1.5' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:161) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1.5.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:163) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1.6' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:499) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_height' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:283) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:284) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'channelloop' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:448) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:454) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.2' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:467) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.3' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:476) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.4' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:485) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.5' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:161) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.5.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:163) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.6' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:499) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_height' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:153) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:155) in function 'hls::Erode<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'channelloop' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:448) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:454) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.2' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:467) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.3' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:476) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.4' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:485) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.5' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:161) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.5.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:163) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.6' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:499) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_height' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:179) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_width' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:181) in function 'hls::Dilate<4096, 4096, 1080, 1920>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'loop_channels' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:91) in function 'hls::AXIvideo2Mat<32, 1080, 1920, 4096>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.2' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:646) in function 'hls::AXIvideo2Mat<32, 1080, 1920, 4096>' completely.
+INFO: [XFORM 203-102] Partitioning array 's.val.assign' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:563) automatically.
+INFO: [XFORM 203-102] Partitioning array 's.val.assign.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:563) automatically.
+INFO: [XFORM 203-102] Partitioning array 's.val.assign.2' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:563) automatically.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_0.data_stream.V' (src/image_filter.cpp:10) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_1.data_stream.V' (src/image_filter.cpp:11) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_2.data_stream.V' (src/image_filter.cpp:12) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_3.data_stream.V' (src/image_filter.cpp:13) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_4.data_stream.V' (src/image_filter.cpp:14) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_5.data_stream.V' (src/image_filter.cpp:15) .
+INFO: [XFORM 203-101] Partitioning array 'pix.val'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 's.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:422) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array '_s.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:423) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'd.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:424) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scl.val.1' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:615) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 's.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:422) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array '_s.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:423) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'd.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:424) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scl.val.2' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:615) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'kernel.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:115) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scl.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:615) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_kernel_win.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:396) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'k_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'right_border_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:401) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'col_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'temp_kernel.val'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_kernel_win.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:396) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'k_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'right_border_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:401) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'col_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'temp_kernel.val84'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_kernel_win.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:396) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'k_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'right_border_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:401) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'col_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:56) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'img_0.data_stream.V' (src/image_filter.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'img_1.data_stream.V' (src/image_filter.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'img_2.data_stream.V' (src/image_filter.cpp:12) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'img_3.data_stream.V' (src/image_filter.cpp:13) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'img_4.data_stream.V' (src/image_filter.cpp:14) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'img_5.data_stream.V' (src/image_filter.cpp:15) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'kernel.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_kernel_win.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:396) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'k_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'right_border_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:401) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'col_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'temp_kernel.val'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_kernel_win.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:396) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'k_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'right_border_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:401) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'col_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'temp_kernel.val84'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_kernel_win.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:396) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'k_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'right_border_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:401) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'col_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_kernel_win.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:396) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'right_border_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:401) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'col_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_kernel_win.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:396) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'right_border_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:401) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'col_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_kernel_win.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:396) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'right_border_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:401) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'col_buf.val' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 3 completely.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<20, 20, (ap_q_mode)5, (ap_o_mode)3>' into 'hls::sr_cast<unsigned char, ap_fixed<20, 20, (ap_q_mode)5, (ap_o_mode)3, 0> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, ap_fixed<20, 20, (ap_q_mode)5, (ap_o_mode)3, 0> >' into 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:302->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:512->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1277) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::Sobel<1, 0, 3, hls::BORDER_DEFAULT, 4096, 4096, 1080, 1920, 1080, 1920>' into 'hls::Sobel<1, 0, 3, 4096, 4096, 1080, 1920, 1080, 1920>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2599) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<9>' into 'hls::sr_cast<unsigned char, ap_int<9> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, ap_int<9> >' into 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:230->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:433) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::arithm_pro<hls::kernel_sub, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' into 'hls::SubS<1080, 1920, 4096, unsigned char, 4096>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:761) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast_class<ap_uint<8> >::operator()<41>' into 'hls::sr_cast<unsigned char, ap_int<41> >' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sr_cast<unsigned char, ap_int<41> >' into 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:208->D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:433) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'image_filter', detected/extracted 7 process function(s): 
+	 'hls::AXIvideo2Mat<32, 1080, 1920, 4096>'
+	 'hls::Sobel<1, 0, 3, 4096, 4096, 1080, 1920, 1080, 1920>'
+	 'hls::SubS<1080, 1920, 4096, unsigned char, 4096>'
+	 'hls::Scale<1080, 1920, 4096, 4096, int>'
+	 'hls::Erode<4096, 4096, 1080, 1920>'
+	 'hls::Dilate<4096, 4096, 1080, 1920>'
+	 'hls::Mat2AXIvideo<32, 1080, 1920, 4096>'.
+Command         transform done; 3.608 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:442:57) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:463:21) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:510:24) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:113:42) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:463:21) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:510:24) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:113:42) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:463:21) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:510:24) in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:442:57) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:463:21) in function 'hls::Erode<4096, 4096, 1080, 1920>'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:510:24) in function 'hls::Erode<4096, 4096, 1080, 1920>'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:113:42) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:463:21) in function 'hls::Erode<4096, 4096, 1080, 1920>'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:510:24) in function 'hls::Erode<4096, 4096, 1080, 1920>'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:113:42) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:463:21) in function 'hls::Erode<4096, 4096, 1080, 1920>'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:510:24) in function 'hls::Erode<4096, 4096, 1080, 1920>'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:442:57) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:463:21) in function 'hls::Dilate<4096, 4096, 1080, 1920>'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:510:24) in function 'hls::Dilate<4096, 4096, 1080, 1920>'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:113:42) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:463:21) in function 'hls::Dilate<4096, 4096, 1080, 1920>'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:510:24) in function 'hls::Dilate<4096, 4096, 1080, 1920>'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgbase.h:113:42) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:463:21) in function 'hls::Dilate<4096, 4096, 1080, 1920>'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:510:24) in function 'hls::Dilate<4096, 4096, 1080, 1920>'... converting 7 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:1269)...33 expression(s) balanced.
+Command         transform done; 1.477 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 239.871 ; gain = 184.145
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.o.2.bc -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'hls::arithm_pro<hls::kernel_scale, 1080, 1920, 4096, unsigned char, 4096, int, int, int>' to 'arithm_pro' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:401:50)
+WARNING: [XFORM 203-631] Renaming function 'hls::SubS<1080, 1920, 4096, unsigned char, 4096>' to 'SubS' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:229:50)
+WARNING: [XFORM 203-631] Renaming function 'hls::Sobel<1, 0, 3, 4096, 4096, 1080, 1920, 1080, 1920>' to 'Sobel' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:2591:1)
+WARNING: [XFORM 203-631] Renaming function 'hls::Scale<1080, 1920, 4096, 4096, int>' to 'Scale' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:868:1)
+WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo<32, 1080, 1920, 4096>' to 'Mat2AXIvideo' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:78:50)
+WARNING: [XFORM 203-631] Renaming function 'hls::Filter2D<hls::BORDER_DEFAULT, 4096, 4096, ap_int<8>, int, 1080, 1920, 3, 3>' to 'Filter2D' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)
+WARNING: [XFORM 203-631] Renaming function 'hls::Erode<4096, 4096, 1080, 1920>' to 'Erode' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)
+WARNING: [XFORM 203-631] Renaming function 'hls::Dilate<4096, 4096, 1080, 1920>' to 'Dilate' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)
+WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat<32, 1080, 1920, 4096>' to 'AXIvideo2Mat' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:49:9)
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[2].val[4]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[1].val[3]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[2].val[5]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[1].val[5]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[1].val[4]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[2].val[3]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[1].val[4]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[1].val[3]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[1].val[5]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[2].val[4]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[2].val[5]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[2].val[3]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[1].val[3]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[2].val[5]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[1].val[4]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[2].val[3]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[1].val[5]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[2].val[4]' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_imgproc.h:398).
+Command         transform done; 2.57 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 339.078 ; gain = 283.352
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 10.868 sec.
+Command     elaborate done; 26.151 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'image_filter' ...
+Execute       ap_set_top_model image_filter 
+Execute       get_model_list image_filter -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model image_filter 
+Execute       preproc_iomode -model Mat2AXIvideo 
+Execute       preproc_iomode -model Dilate 
+Execute       preproc_iomode -model Erode 
+Execute       preproc_iomode -model Scale 
+Execute       preproc_iomode -model arithm_pro 
+Execute       preproc_iomode -model SubS 
+Execute       preproc_iomode -model Sobel 
+Execute       preproc_iomode -model Filter2D 
+Execute       preproc_iomode -model AXIvideo2Mat 
+Execute       get_model_list image_filter -filter all-wo-channel 
+INFO-FLOW: Model list for configure: AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter
+INFO-FLOW: Configuring Module : AXIvideo2Mat ...
+Execute       set_default_model AXIvideo2Mat 
+Execute       apply_spec_resource_limit AXIvideo2Mat 
+INFO-FLOW: Configuring Module : Filter2D ...
+Execute       set_default_model Filter2D 
+Execute       apply_spec_resource_limit Filter2D 
+INFO-FLOW: Configuring Module : Sobel ...
+Execute       set_default_model Sobel 
+Execute       apply_spec_resource_limit Sobel 
+INFO-FLOW: Configuring Module : SubS ...
+Execute       set_default_model SubS 
+Execute       apply_spec_resource_limit SubS 
+INFO-FLOW: Configuring Module : arithm_pro ...
+Execute       set_default_model arithm_pro 
+Execute       apply_spec_resource_limit arithm_pro 
+INFO-FLOW: Configuring Module : Scale ...
+Execute       set_default_model Scale 
+Execute       apply_spec_resource_limit Scale 
+INFO-FLOW: Configuring Module : Erode ...
+Execute       set_default_model Erode 
+Execute       apply_spec_resource_limit Erode 
+INFO-FLOW: Configuring Module : Dilate ...
+Execute       set_default_model Dilate 
+Execute       apply_spec_resource_limit Dilate 
+INFO-FLOW: Configuring Module : Mat2AXIvideo ...
+Execute       set_default_model Mat2AXIvideo 
+Execute       apply_spec_resource_limit Mat2AXIvideo 
+INFO-FLOW: Configuring Module : image_filter ...
+Execute       set_default_model image_filter 
+Execute       apply_spec_resource_limit image_filter 
+INFO-FLOW: Model list for preprocess: AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter
+INFO-FLOW: Preprocessing Module: AXIvideo2Mat ...
+Execute       set_default_model AXIvideo2Mat 
+Execute       cdfg_preprocess -model AXIvideo2Mat 
+Execute       rtl_gen_preprocess AXIvideo2Mat 
+INFO-FLOW: Preprocessing Module: Filter2D ...
+Execute       set_default_model Filter2D 
+Execute       cdfg_preprocess -model Filter2D 
+Execute       rtl_gen_preprocess Filter2D 
+INFO-FLOW: Preprocessing Module: Sobel ...
+Execute       set_default_model Sobel 
+Execute       cdfg_preprocess -model Sobel 
+Execute       rtl_gen_preprocess Sobel 
+INFO-FLOW: Preprocessing Module: SubS ...
+Execute       set_default_model SubS 
+Execute       cdfg_preprocess -model SubS 
+Execute       rtl_gen_preprocess SubS 
+INFO-FLOW: Preprocessing Module: arithm_pro ...
+Execute       set_default_model arithm_pro 
+Execute       cdfg_preprocess -model arithm_pro 
+Execute       rtl_gen_preprocess arithm_pro 
+INFO-FLOW: Preprocessing Module: Scale ...
+Execute       set_default_model Scale 
+Execute       cdfg_preprocess -model Scale 
+Execute       rtl_gen_preprocess Scale 
+INFO-FLOW: Preprocessing Module: Erode ...
+Execute       set_default_model Erode 
+Execute       cdfg_preprocess -model Erode 
+Execute       rtl_gen_preprocess Erode 
+INFO-FLOW: Preprocessing Module: Dilate ...
+Execute       set_default_model Dilate 
+Execute       cdfg_preprocess -model Dilate 
+Execute       rtl_gen_preprocess Dilate 
+INFO-FLOW: Preprocessing Module: Mat2AXIvideo ...
+Execute       set_default_model Mat2AXIvideo 
+Execute       cdfg_preprocess -model Mat2AXIvideo 
+Execute       rtl_gen_preprocess Mat2AXIvideo 
+INFO-FLOW: Preprocessing Module: image_filter ...
+Execute       set_default_model image_filter 
+Execute       cdfg_preprocess -model image_filter 
+Execute       rtl_gen_preprocess image_filter 
+INFO-FLOW: Model list for synthesis: AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2Mat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model AXIvideo2Mat 
+Execute       schedule -model AXIvideo2Mat 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.167 sec.
+INFO: [HLS 200-111]  Elapsed time: 27.202 seconds; current allocated memory: 283.887 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.verbose.sched.rpt -verbose -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+INFO: [HLS 200-434] Only 3 loops out of a total 4 loops have been pipelined in this design.
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.sched.adb -f 
+INFO-FLOW: Finish scheduling AXIvideo2Mat.
+Execute       set_default_model AXIvideo2Mat 
+Execute       bind -model AXIvideo2Mat 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=AXIvideo2Mat
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.115 seconds; current allocated memory: 284.245 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.verbose.bind.rpt -verbose -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.bind.adb -f 
+INFO-FLOW: Finish binding AXIvideo2Mat.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Filter2D 
+Execute       schedule -model Filter2D 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.48 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.569 seconds; current allocated memory: 285.971 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.verbose.sched.rpt -verbose -f 
+Command       report done; 0.108 sec.
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.sched.adb -f 
+INFO-FLOW: Finish scheduling Filter2D.
+Execute       set_default_model Filter2D 
+Execute       bind -model Filter2D 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Filter2D
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.322 seconds; current allocated memory: 287.222 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.verbose.bind.rpt -verbose -f 
+Command       report done; 0.207 sec.
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.bind.adb -f 
+Command       db_write done; 0.111 sec.
+INFO-FLOW: Finish binding Filter2D.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Sobel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Sobel 
+Execute       schedule -model Sobel 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.383 seconds; current allocated memory: 287.388 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.sched.adb -f 
+INFO-FLOW: Finish scheduling Sobel.
+Execute       set_default_model Sobel 
+Execute       bind -model Sobel 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Sobel
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.105 seconds; current allocated memory: 287.553 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.verbose.bind.rpt -verbose -f 
+Command       report done; 0.116 sec.
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.bind.adb -f 
+INFO-FLOW: Finish binding Sobel.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SubS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model SubS 
+Execute       schedule -model SubS 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.21 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.379 seconds; current allocated memory: 287.902 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.sched.adb -f 
+INFO-FLOW: Finish scheduling SubS.
+Execute       set_default_model SubS 
+Execute       bind -model SubS 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=SubS
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 288.171 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.verbose.bind.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.bind.adb -f 
+INFO-FLOW: Finish binding SubS.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'arithm_pro' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model arithm_pro 
+Execute       schedule -model arithm_pro 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.204 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.284 seconds; current allocated memory: 288.359 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.sched.adb -f 
+INFO-FLOW: Finish scheduling arithm_pro.
+Execute       set_default_model arithm_pro 
+Execute       bind -model arithm_pro 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=arithm_pro
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.094 seconds; current allocated memory: 288.558 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.verbose.bind.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.bind.adb -f 
+INFO-FLOW: Finish binding arithm_pro.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Scale' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Scale 
+Execute       schedule -model Scale 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.095 seconds; current allocated memory: 288.603 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.sched.adb -f 
+INFO-FLOW: Finish scheduling Scale.
+Execute       set_default_model Scale 
+Execute       bind -model Scale 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Scale
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 288.738 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.verbose.bind.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.bind.adb -f 
+INFO-FLOW: Finish binding Scale.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Erode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Erode 
+Execute       schedule -model Erode 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.43 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.494 seconds; current allocated memory: 290.091 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.sched.adb -f 
+INFO-FLOW: Finish scheduling Erode.
+Execute       set_default_model Erode 
+Execute       bind -model Erode 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Erode
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.285 seconds; current allocated memory: 291.136 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.verbose.bind.rpt -verbose -f 
+Command       report done; 0.17 sec.
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.bind.adb -f 
+INFO-FLOW: Finish binding Erode.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Dilate' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Dilate 
+Execute       schedule -model Dilate 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.43 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.74 seconds; current allocated memory: 292.624 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.sched.adb -f 
+INFO-FLOW: Finish scheduling Dilate.
+Execute       set_default_model Dilate 
+Execute       bind -model Dilate 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Dilate
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.289 seconds; current allocated memory: 293.653 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.verbose.bind.rpt -verbose -f 
+Command       report done; 0.166 sec.
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.bind.adb -f 
+INFO-FLOW: Finish binding Dilate.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Mat2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Mat2AXIvideo 
+Execute       schedule -model Mat2AXIvideo 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.126 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.433 seconds; current allocated memory: 293.996 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.sched.adb -f 
+INFO-FLOW: Finish scheduling Mat2AXIvideo.
+Execute       set_default_model Mat2AXIvideo 
+Execute       bind -model Mat2AXIvideo 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Mat2AXIvideo
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 294.207 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.verbose.bind.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.bind.adb -f 
+INFO-FLOW: Finish binding Mat2AXIvideo.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'image_filter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model image_filter 
+Execute       schedule -model image_filter 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.119 seconds; current allocated memory: 294.378 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.sched.adb -f 
+INFO-FLOW: Finish scheduling image_filter.
+Execute       set_default_model image_filter 
+Execute       bind -model image_filter 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=image_filter
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.774 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.843 seconds; current allocated memory: 295.829 MB.
+Execute       report -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.verbose.bind.rpt -verbose -f 
+Command       report done; 0.335 sec.
+Execute       db_write -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.bind.adb -f 
+INFO-FLOW: Finish binding image_filter.
+Execute       get_model_list image_filter -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess AXIvideo2Mat 
+Execute       rtl_gen_preprocess Filter2D 
+Execute       rtl_gen_preprocess Sobel 
+Execute       rtl_gen_preprocess SubS 
+Execute       rtl_gen_preprocess arithm_pro 
+Execute       rtl_gen_preprocess Scale 
+Execute       rtl_gen_preprocess Erode 
+Execute       rtl_gen_preprocess Dilate 
+Execute       rtl_gen_preprocess Mat2AXIvideo 
+Execute       rtl_gen_preprocess image_filter 
+INFO-FLOW: Model list for RTL generation: AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2Mat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model AXIvideo2Mat -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2Mat'.
+INFO: [HLS 200-111]  Elapsed time: 0.459 seconds; current allocated memory: 297.147 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/AXIvideo2Mat -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/AXIvideo2Mat 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/AXIvideo2Mat 
+Execute       gen_tb_info AXIvideo2Mat -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model AXIvideo2Mat -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/AXIvideo2Mat_csynth.rpt -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+Execute       report -model AXIvideo2Mat -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/AXIvideo2Mat_csynth.xml -f -x 
+Execute       report -model AXIvideo2Mat -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.verbose.rpt -verbose -f 
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+Execute       db_write -model AXIvideo2Mat -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Filter2D -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'Filter2D_k_buf_0_val_3' to 'Filter2D_k_buf_0_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Filter2D_k_buf_0_val_4' to 'Filter2D_k_buf_0_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Filter2D_k_buf_0_val_5' to 'Filter2D_k_buf_0_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Filter2D_k_buf_1_val_3' to 'Filter2D_k_buf_1_eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Filter2D_k_buf_1_val_4' to 'Filter2D_k_buf_1_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Filter2D_k_buf_1_val_5' to 'Filter2D_k_buf_1_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Filter2D_k_buf_2_val_3' to 'Filter2D_k_buf_2_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Filter2D_k_buf_2_val_4' to 'Filter2D_k_buf_2_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Filter2D_k_buf_2_val_5' to 'Filter2D_k_buf_2_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'image_filter_mux_32_8_1_1' to 'image_filter_mux_kbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'image_filter_mux_kbM': 18 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2D'.
+Command       create_rtl_model done; 0.187 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.394 seconds; current allocated memory: 299.613 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Filter2D -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/Filter2D -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl Filter2D -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/Filter2D 
+Execute       gen_rtl Filter2D -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/Filter2D 
+Execute       gen_tb_info Filter2D -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model Filter2D -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Filter2D_csynth.rpt -f 
+Execute       report -model Filter2D -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Filter2D_csynth.xml -f -x 
+Execute       report -model Filter2D -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.verbose.rpt -verbose -f 
+Command       report done; 0.246 sec.
+Execute       db_write -model Filter2D -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.adb -f 
+Command       db_write done; 0.197 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Sobel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Sobel -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel'.
+INFO: [HLS 200-111]  Elapsed time: 0.835 seconds; current allocated memory: 300.684 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Sobel -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/Sobel -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl Sobel -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/Sobel 
+Execute       gen_rtl Sobel -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/Sobel 
+Execute       gen_tb_info Sobel -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model Sobel -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Sobel_csynth.rpt -f 
+Execute       report -model Sobel -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Sobel_csynth.xml -f -x 
+Execute       report -model Sobel -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.verbose.rpt -verbose -f 
+Command       report done; 0.121 sec.
+Execute       db_write -model Sobel -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SubS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model SubS -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SubS'.
+INFO: [HLS 200-111]  Elapsed time: 0.256 seconds; current allocated memory: 301.166 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl SubS -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/SubS -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl SubS -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/SubS 
+Execute       gen_rtl SubS -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/SubS 
+Execute       gen_tb_info SubS -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model SubS -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/SubS_csynth.rpt -f 
+Execute       report -model SubS -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/SubS_csynth.xml -f -x 
+Execute       report -model SubS -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.verbose.rpt -verbose -f 
+Execute       db_write -model SubS -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'arithm_pro' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model arithm_pro -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'arithm_pro'.
+INFO: [HLS 200-111]  Elapsed time: 0.203 seconds; current allocated memory: 301.585 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl arithm_pro -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/arithm_pro -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl arithm_pro -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/arithm_pro 
+Execute       gen_rtl arithm_pro -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/arithm_pro 
+Execute       gen_tb_info arithm_pro -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model arithm_pro -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/arithm_pro_csynth.rpt -f 
+Execute       report -model arithm_pro -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/arithm_pro_csynth.xml -f -x 
+Execute       report -model arithm_pro -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.verbose.rpt -verbose -f 
+Execute       db_write -model arithm_pro -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Scale' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Scale -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Scale'.
+INFO: [HLS 200-111]  Elapsed time: 0.172 seconds; current allocated memory: 301.889 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Scale -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/Scale -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl Scale -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/Scale 
+Execute       gen_rtl Scale -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/Scale 
+Execute       gen_tb_info Scale -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model Scale -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Scale_csynth.rpt -f 
+Execute       report -model Scale -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Scale_csynth.xml -f -x 
+Execute       report -model Scale -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.verbose.rpt -verbose -f 
+Execute       db_write -model Scale -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Erode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Erode -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'image_filter_mux_kbM': 18 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Erode'.
+INFO: [HLS 200-111]  Elapsed time: 0.217 seconds; current allocated memory: 303.905 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Erode -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/Erode -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl Erode -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/Erode 
+Execute       gen_rtl Erode -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/Erode 
+Execute       gen_tb_info Erode -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model Erode -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Erode_csynth.rpt -f 
+Execute       report -model Erode -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Erode_csynth.xml -f -x 
+Execute       report -model Erode -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.verbose.rpt -verbose -f 
+Command       report done; 0.206 sec.
+Execute       db_write -model Erode -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.adb -f 
+Command       db_write done; 0.182 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Dilate' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Dilate -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'Dilate_k_buf_0_val_3' to 'Dilate_k_buf_0_valbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Dilate_k_buf_0_val_4' to 'Dilate_k_buf_0_vamb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Dilate_k_buf_0_val_5' to 'Dilate_k_buf_0_vancg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Dilate_k_buf_1_val_3' to 'Dilate_k_buf_1_vaocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Dilate_k_buf_1_val_4' to 'Dilate_k_buf_1_vapcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Dilate_k_buf_1_val_5' to 'Dilate_k_buf_1_vaqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Dilate_k_buf_2_val_3' to 'Dilate_k_buf_2_varcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Dilate_k_buf_2_val_4' to 'Dilate_k_buf_2_vasc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Dilate_k_buf_2_val_5' to 'Dilate_k_buf_2_vatde' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'image_filter_mux_kbM': 18 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Dilate'.
+Command       create_rtl_model done; 0.162 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.876 seconds; current allocated memory: 306.556 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Dilate -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/Dilate -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl Dilate -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/Dilate 
+Execute       gen_rtl Dilate -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/Dilate 
+Execute       gen_tb_info Dilate -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model Dilate -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Dilate_csynth.rpt -f 
+Execute       report -model Dilate -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Dilate_csynth.xml -f -x 
+Execute       report -model Dilate -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.verbose.rpt -verbose -f 
+Command       report done; 0.208 sec.
+Execute       db_write -model Dilate -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.adb -f 
+Command       db_write done; 0.196 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Mat2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Mat2AXIvideo -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mat2AXIvideo'.
+INFO: [HLS 200-111]  Elapsed time: 0.759 seconds; current allocated memory: 308.062 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Mat2AXIvideo -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/Mat2AXIvideo -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl Mat2AXIvideo -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/Mat2AXIvideo 
+Execute       gen_rtl Mat2AXIvideo -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/Mat2AXIvideo 
+Execute       gen_tb_info Mat2AXIvideo -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model Mat2AXIvideo -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Mat2AXIvideo_csynth.rpt -f 
+Execute       report -model Mat2AXIvideo -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/Mat2AXIvideo_csynth.xml -f -x 
+Execute       report -model Mat2AXIvideo -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.verbose.rpt -verbose -f 
+Execute       db_write -model Mat2AXIvideo -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'image_filter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model image_filter -vendor xilinx -mg_file D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/INPUT_STREAM_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/INPUT_STREAM_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/INPUT_STREAM_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/INPUT_STREAM_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/INPUT_STREAM_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/INPUT_STREAM_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/INPUT_STREAM_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/OUTPUT_STREAM_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/OUTPUT_STREAM_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/OUTPUT_STREAM_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/OUTPUT_STREAM_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/OUTPUT_STREAM_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/OUTPUT_STREAM_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/OUTPUT_STREAM_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/rows' to 'ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'image_filter/cols' to 'ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'image_filter' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'image_filter'.
+Command       create_rtl_model done; 0.162 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.401 seconds; current allocated memory: 308.974 MB.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       gen_rtl image_filter -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/hls_OpenCV/image_filter_prj/solution1/syn/systemc/image_filter -synmodules AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter 
+Execute       gen_rtl image_filter -istop -style xilinx -f -lang vhdl -o D:/hls_OpenCV/image_filter_prj/solution1/syn/vhdl/image_filter 
+Execute       gen_rtl image_filter -istop -style xilinx -f -lang vlog -o D:/hls_OpenCV/image_filter_prj/solution1/syn/verilog/image_filter 
+Execute       export_constraint_db -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.constraint.tcl -f -tool general 
+Execute       report -model image_filter -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.design.xml -verbose -f -dv 
+Command       report done; 0.326 sec.
+Execute       report -model image_filter -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info image_filter -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter -p D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db 
+Execute       report -model image_filter -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/image_filter_csynth.rpt -f 
+Execute       report -model image_filter -o D:/hls_OpenCV/image_filter_prj/solution1/syn/report/image_filter_csynth.xml -f -x 
+Execute       report -model image_filter -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.verbose.rpt -verbose -f 
+Command       report done; 0.351 sec.
+Execute       db_write -model image_filter -o D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.adb -f 
+Command       db_write done; 0.103 sec.
+Execute       sc_get_clocks image_filter 
+Execute       sc_get_portdomain image_filter 
+INFO-FLOW: Model list for RTL component generation: AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter
+INFO-FLOW: Handling components in module [AXIvideo2Mat] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+INFO-FLOW: Handling components in module [Filter2D] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.compgen.tcl 
+INFO-FLOW: Found component image_filter_mux_kbM.
+INFO-FLOW: Append model image_filter_mux_kbM
+INFO-FLOW: Found component Filter2D_k_buf_0_bkb.
+INFO-FLOW: Append model Filter2D_k_buf_0_bkb
+INFO-FLOW: Handling components in module [Sobel] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.compgen.tcl 
+INFO-FLOW: Handling components in module [SubS] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.compgen.tcl 
+INFO-FLOW: Handling components in module [arithm_pro] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.compgen.tcl 
+INFO-FLOW: Handling components in module [Scale] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.compgen.tcl 
+INFO-FLOW: Handling components in module [Erode] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.compgen.tcl 
+INFO-FLOW: Handling components in module [Dilate] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.compgen.tcl 
+INFO-FLOW: Handling components in module [Mat2AXIvideo] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+INFO-FLOW: Handling components in module [image_filter] ... 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.compgen.tcl 
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Append model AXIvideo2Mat
+INFO-FLOW: Append model Filter2D
+INFO-FLOW: Append model Sobel
+INFO-FLOW: Append model SubS
+INFO-FLOW: Append model arithm_pro
+INFO-FLOW: Append model Scale
+INFO-FLOW: Append model Erode
+INFO-FLOW: Append model Dilate
+INFO-FLOW: Append model Mat2AXIvideo
+INFO-FLOW: Append model image_filter
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: image_filter_mux_kbM Filter2D_k_buf_0_bkb fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A fifo_w8_d2_A AXIvideo2Mat Filter2D Sobel SubS arithm_pro Scale Erode Dilate Mat2AXIvideo image_filter
+INFO-FLOW: To file: write model image_filter_mux_kbM
+INFO-FLOW: To file: write model Filter2D_k_buf_0_bkb
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model AXIvideo2Mat
+INFO-FLOW: To file: write model Filter2D
+INFO-FLOW: To file: write model Sobel
+INFO-FLOW: To file: write model SubS
+INFO-FLOW: To file: write model arithm_pro
+INFO-FLOW: To file: write model Scale
+INFO-FLOW: To file: write model Erode
+INFO-FLOW: To file: write model Dilate
+INFO-FLOW: To file: write model Mat2AXIvideo
+INFO-FLOW: To file: write model image_filter
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.114 sec.
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.117 sec.
+Command       ap_source done; 0.117 sec.
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'Filter2D_k_buf_0_bkb_ram (RAM)' using block RAMs.
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.compgen.tcl 
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_0_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_1_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_1_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_1_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_2_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_2_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_2_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_3_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_3_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_3_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_4_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_4_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_4_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_5_data_stream_0_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_5_data_stream_1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_5_data_stream_2_U(fifo_w8_d2_A)' using Shift Registers.
+Command       ap_source done; 0.301 sec.
+Execute       get_config_sdx -target 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.116 sec.
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.119 sec.
+Command       ap_source done; 0.119 sec.
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Filter2D.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Sobel.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/SubS.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/arithm_pro.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Scale.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Erode.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Dilate.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.compgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/impl/.pcores/verilog/CONTROL_BUS.slave.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.constraint.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.constraint.tcl 
+Execute       sc_get_clocks image_filter 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+Execute       source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 393.164 ; gain = 337.438
+INFO: [SYSC 207-301] Generating SystemC RTL for image_filter.
+INFO: [VHDL 208-304] Generating VHDL RTL for image_filter.
+INFO: [VLOG 209-307] Generating Verilog RTL for image_filter.
+Command     autosyn done; 13.176 sec.
+Command   csynth_design done; 39.331 sec.
+Command ap_source done; 39.617 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace D:/hls_OpenCV/image_filter_prj/solution1 opened at Wed Jul 28 22:30:54 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.125 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.125ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.131 sec.
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.133 sec.
+Command     ap_source done; 0.133 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a75tfgg484-1 
+Execute       add_library xilinx/artix7/artix7:xc7a75t:fgg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a75t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 11800} {LUT 47200}     {FF 94400}  {DSP48E 180}    {BRAM 210}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7a75tfgg484-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 11800} {LUT 47200}     {FF 94400}  {DSP48E 180}    {BRAM 210}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.226 sec.
+Execute   cosim_design -O -reduce_diskspace 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.115 sec.
+Execute         source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.117 sec.
+Command     ap_source done; 0.117 sec.
+Execute     source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     is_encrypted D:/hls_OpenCV/src/test_1080p.bmp 
+Execute     is_encrypted D:/hls_OpenCV/src/test.cpp 
+Execute     is_encrypted D:/hls_OpenCV/src/opencv_top.h 
+Execute     is_encrypted D:/hls_OpenCV/src/opencv_top.cpp 
+Execute     is_encrypted D:/hls_OpenCV/src/image_filter.h 
+Execute     is_encrypted D:/hls_OpenCV/src/image_filter.cpp 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: D:/hls_OpenCV/src/test.cpp D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/test.cpp_pre.cpp
+INFO-FLOW: Marker-Pragma convertor: D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/test.cpp_pre.cpp D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/test.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/test.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/test.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: D:/hls_OpenCV/src/opencv_top.cpp D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/opencv_top.cpp_pre.cpp
+INFO-FLOW: Marker-Pragma convertor: D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/opencv_top.cpp_pre.cpp D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/opencv_top.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/opencv_top.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/opencv_top.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: D:/hls_OpenCV/src/image_filter.cpp D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/image_filter.cpp_pre.cpp
+INFO-FLOW: Marker-Pragma convertor: D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/image_filter.cpp_pre.cpp D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/image_filter.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/image_filter.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/image_filter.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/./sim/autowrap/testbench/tb.status.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     get_default_platform 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 68.874 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     get_default_platform 
+Execute     get_default_platform 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 532.514 sec.
+INTERNAL MESSAGE XML ERROR: read xml: D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/.message_cosim.xml(18): expected <
+
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INTERNAL MESSAGE XML ERROR: read xml: D:/hls_OpenCV/image_filter_prj/solution1/.autopilot/db/.message_cosim.xml(18): expected <
+
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 733.894 sec.
+Command ap_source done; 734.123 sec.
+Execute cleanup_all 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-433] Loop   ++ loop_wait_for_eol has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:25.729+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:25.651+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop   ++ loop_wait_for_eol has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:25.651+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:25.620+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop   ++ loop_wait_for_eol has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:24.089+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:24.042+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop   ++ loop_wait_for_eol has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:23.948+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:23.932+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat&lt;128, 1080, 1920, 2054>' to 'AXIvideo2Mat' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:63:9)" projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:23.651+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AddWeighted&lt;1080, 1920, 6, 6, 6, int>' to 'AddWeighted' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:280:50)" projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:22.900+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo&lt;128, 1080, 1920, 2054>' to 'Mat2AXIvideo' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_io.h:94:50)" projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:22.900+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mul&lt;1080, 1920, 6, 6, 6, int>' to 'Mul' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:251:50)" projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:22.884+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Split&lt;1080, 1920, 2054, 6>' to 'Split' (D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_arithm.h:617:50)" projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:22.884+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img1.data_stream.V' (opencv_prj/src/array_mul.cpp:5)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.636+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img2.data_stream.V' (opencv_prj/src/array_mul.cpp:7)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.424+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_result.data_stream.V' (opencv_prj/src/array_mul.cpp:18)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.424+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img2_Im.data_stream.V' (opencv_prj/src/array_mul.cpp:15)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.419+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img1_Im.data_stream.V' (opencv_prj/src/array_mul.cpp:11)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.403+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img2_Re.data_stream.V' (opencv_prj/src/array_mul.cpp:13)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.403+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img1_Re.data_stream.V' (opencv_prj/src/array_mul.cpp:9)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.403+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_result6.data_stream.V' (opencv_prj/src/array_mul.cpp:30)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.403+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_result5.data_stream.V' (opencv_prj/src/array_mul.cpp:28)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.398+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_result4.data_stream.V' (opencv_prj/src/array_mul.cpp:26)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.383+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_result3.data_stream.V' (opencv_prj/src/array_mul.cpp:24)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.383+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_result2.data_stream.V' (opencv_prj/src/array_mul.cpp:22)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.383+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_result1.data_stream.V' (opencv_prj/src/array_mul.cpp:20)." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:20.378+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] D:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:94: variable-indexed range selection may cause suboptimal QoR." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:33:19.926+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'a.jpg'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:32:41.594+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'b.jpg'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:32:41.578+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'array_mul_ap_dmul_4_max_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:34:25.408+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'array_mul_ap_dadd_3_full_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="opencv_prj" solutionName="solution1" date="2021-07-29T09:34:23.505+0800" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

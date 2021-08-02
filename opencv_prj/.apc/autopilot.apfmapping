@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="a.jpg" path="D:\hls_OpenCV\opencv_prj\src\a.jpg"/>
+    <originFiles name="array_abs.cpp" path="D:\hls_OpenCV\opencv_prj\src\array_abs.cpp"/>
+    <originFiles name="array_abs.h" path="D:\hls_OpenCV\opencv_prj\src\array_abs.h"/>
+    <originFiles name="array_div.cpp" path="D:\hls_OpenCV\opencv_prj\src\array_div.cpp"/>
+    <originFiles name="array_div.h" path="D:\hls_OpenCV\opencv_prj\src\array_div.h"/>
+    <originFiles name="array_mul.cpp" path="D:\hls_OpenCV\opencv_prj\src\array_mul.cpp"/>
+    <originFiles name="array_mul.h" path="D:\hls_OpenCV\opencv_prj\src\array_mul.h"/>
+    <originFiles name="b.jpg" path="D:\hls_OpenCV\opencv_prj\src\b.jpg"/>
+  </source>
+  <testbench>
+    <originFiles name="cpu.cpp" path="D:\hls_OpenCV\opencv_prj\src\cpu.cpp"/>
+    <originFiles name="cpu.h" path="D:\hls_OpenCV\opencv_prj\src\cpu.h"/>
+    <originFiles name="cpu_test.cpp" path="D:\hls_OpenCV\opencv_prj\src\cpu_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
